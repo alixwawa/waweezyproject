@@ -1,7 +1,7 @@
 import { Bio } from './components/bio';
 import { Header } from './components/header';
 import { Footer } from './components/footer';
-import { headerNavbar } from './components/headerNavbar';
+import { HeaderNavbar } from './components/headerNavbar';
 
 
 
@@ -10,7 +10,7 @@ export const Home = () => {
 
     return (
         <>
-            <headerNavbar></headerNavbar>
+            <HeaderNavbar></HeaderNavbar>
             <Header></Header>
             <Bio></Bio>
             <Footer></Footer>
