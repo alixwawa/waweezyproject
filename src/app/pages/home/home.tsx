@@ -1,15 +1,16 @@
-
-
-interface HomeProps {
-    name: string;
-};
+import { Bio } from './components/bio'
+import { Header } from './components/header'
 
 
 
-export const Home = (props: HomeProps) => {
+
+export const Home = () => {
     
     return (
-       <h1>{props.name}</h1>
+        <>
+       <Header></Header>
+       <Bio></Bio>
+       </>
     );
 };
 
