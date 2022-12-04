@@ -9,10 +9,10 @@ export const Bio = () => {
     return (
         <div>
             <table>
-                <tr>
+                <tr className='row-with-picture'>
                     <td>
                         <div>
-                            <img src={meWorking} className="App-logo" alt="logo" />
+                            <img className='picture-of-me' src={meWorking} alt="logo" />
                         </div>
                     </td>
                     <td>

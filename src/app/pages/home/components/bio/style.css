@@ -8,3 +8,12 @@
     transition: 0.3s;
     /* width: 40%; */
 }
+
+@media only screen and (max-width: 600px) {
+    .row-with-picture {
+        display: grid;
+    }
+    .picture-of-me {
+        width: 100%;
+    }
+}

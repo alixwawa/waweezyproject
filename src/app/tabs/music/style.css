@@ -1,0 +1,10 @@
+.soundcloud-div {
+    width: 50%;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+    .soundcloud-div {
+        width: 100%;
+    }
+  }
