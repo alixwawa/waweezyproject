@@ -1,4 +1,3 @@
-import { Bio } from './components/bio';
 import { Header } from './components/header';
 import { Footer } from './components/footer';
 import { HeaderNavbar } from './components/headerNavbar';
