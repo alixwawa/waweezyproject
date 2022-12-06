@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { AboutMe } from "../../../../tabs/aboutMe";
 import { Music } from "../../../../tabs/music";
+import { Contact } from "../../../../tabs/contact";
+
 import './style.css';
 
 
@@ -17,6 +19,25 @@ export const HeaderNavbar = () => {
         // update the state to tab2
         setActiveTab("tab2");
     };
+    const handleTab3 = () => {
+        // update the state to tab2
+        setActiveTab("tab3");
+    };
+
+    // switch(activeTab){
+    //     case 'tab1': {
+    //       <AboutMe />
+    //       break;
+    //     }
+    //     case 'tab2': {
+    //       <Music />
+    //       break;
+    //     }
+    //     case 'tab3': {
+    //       <Contact />
+    //       break;
+    //     }
+    // }
     
     return (
         <>
@@ -33,9 +54,17 @@ export const HeaderNavbar = () => {
                 >
                     <h5>Music</h5>
                 </li>
+                <li
+                    className={activeTab === "tab3" ? "active" : ""}
+                    onClick={handleTab3}
+                >
+                    <h5>Contact</h5>
+                </li>
             </ul>
             <div className="outlet">
-                {activeTab === "tab1" ? <AboutMe /> : <Music />}
+                {activeTab === "tab1" ? <AboutMe /> : ''}
+                {activeTab === "tab2" ? <Music /> : ''}
+                {activeTab === "tab3" ? <Contact /> : ''}
             </div>
         </>
 

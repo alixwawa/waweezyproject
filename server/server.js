@@ -31,7 +31,7 @@ app.get("/users", (req, res) => {
     "users": ["alix", "betsy", "frantz"]
   })
 })
-// require("./controller/get-routes.js")(app);
+
 // require("./controller/app-routes.js")(app);
 
 
