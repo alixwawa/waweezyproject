@@ -1,8 +1,10 @@
 import axios from "axios";
 
-export default {
+export const axiosRoutes = {
   // Saves a post to the database
-  savePost: function(postData) {
-    return axios.post("/api/posts", postData);
+  saveInfo: function(postData) {
+    return axios.post("http://localhost:3001/info", postData);
   }
 };
+
+export default axiosRoutes

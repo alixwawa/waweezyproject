@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { axiosRoutes } from '../../../../api/api';
 import './style.css';
 
 export const Email = () => {
@@ -32,6 +33,14 @@ export const Email = () => {
     if (values.firstName && values.lastName && values.email) {
       setValid(true);
       setSubmittedSuccessfully(true);
+      axiosRoutes.saveInfo({
+        firstName: values.firstName,
+        lastName: values.lastName,
+        email: values.email,
+      }).then(result => console.log('result', result))
+        .catch(function (error) {
+          console.log(error);
+        });
       console.log(values);
     }
     setSubmitted(true)

@@ -1,10 +1,13 @@
 const express = require("express");
 // const path = require('path');
 const db = require('./models');
+const cors = require('cors');
+
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+
 // app.use(express.static("public"));
 
 // Define middleware here
@@ -27,13 +30,18 @@ const app = express();
 //   }
 // );
 
-app.get("/users", (req, res) => {
-  res.json({
-    "users": ["alix", "betsy", "frantz"]
-  })
-})
+// app.get("/info", (req, res) => {
+//   res.json({
+//     "users": ["alix", "betsy", "frantz"]
+//   })
+// })
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
 
-// require("./controller/app-routes.js")(app);
+app.use(express.json());
+
+require("./controller/app-routes.js")(app);
 
 
 // Syncing our database and logging a message to the user upon success
