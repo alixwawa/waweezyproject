@@ -8,8 +8,6 @@ module.exports = app => {
   app.post("/emails", (req, res) => {
     db.mailList.create({
       email: req.body.email,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
     })
       // .then(() => {
       //   res.redirect(307, "/api/login");
