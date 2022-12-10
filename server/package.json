@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "sequelize": "^5.22.4"
+    "sequelize": "^5.22.4",
+    "mysql2": "^1.6.5"
   },
   "devDependencies": {
     "@types/node": "^18.11.10",

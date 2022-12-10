@@ -1,5 +1,6 @@
 const express = require("express");
 // const path = require('path');
+const db = require('./models');
 
 const PORT = process.env.PORT || 3001;
 
@@ -36,7 +37,7 @@ app.get("/users", (req, res) => {
 
 
 // Syncing our database and logging a message to the user upon success
-// db.sequelize.sync().then(() => {
+db.sequelize.sync().then(() => {
 app.listen(PORT, () => {
     console.log(
       "Listening on port %s. Visit http://localhost:%s/ in your browser.",
@@ -44,4 +45,4 @@ app.listen(PORT, () => {
       PORT
     );
   });
-// });
+});

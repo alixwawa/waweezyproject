@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var mailList = sequelize.define("teams", {
+    var mailList = sequelize.define("mailList", {
         email: {
             type: DataTypes.STRING,
             allowNull: false,
