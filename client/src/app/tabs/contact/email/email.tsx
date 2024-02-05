@@ -4,8 +4,7 @@ import { axiosRoutes } from '../../../../api/api';
 import './style.css';
 
 export const Email = () => {
-
-
+ 
   const [values, setValues] = useState({
     firstName: "",
     lastName: "",
